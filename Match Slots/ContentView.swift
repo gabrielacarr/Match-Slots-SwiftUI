@@ -8,11 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+
+  @State  var credits = 1_000
+   @State  var slot1 = 1
+    @State var slot2 = 1
+    @State var slot3 = 1
+
     var body: some View {
+
+
 
       VStack {
         // Name of app
-        Text("SwiftUI Match Slots")
+        Text("SwiftUI Match Slots").font(.largeTitle)
         Spacer()
 
         // Credit calulations
@@ -21,7 +29,7 @@ struct ContentView: View {
         Spacer()
 
         // HStack for 3 Images to match
-        HStack {
+        HStack(alignment: .center) {
         Image(systemName: "pencil")
         Image(systemName: "pencil")
         Image(systemName: "pencil")
