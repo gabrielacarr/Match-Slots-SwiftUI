@@ -9,8 +9,33 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+
+      VStack {
+        // Name of app
+        Text("SwiftUI Match Slots")
+        Spacer()
+
+        // Credit calulations
+        // Score increases if all images match
+        Text("Credits")
+        Spacer()
+
+        // HStack for 3 Images to match
+        HStack {
+        Image(systemName: "pencil")
+        Image(systemName: "pencil")
+        Image(systemName: "pencil")
+        Spacer()
+        }
+
+        // Button to spin
+        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+          Text("Spin")
+        })
+        Spacer()
+      }
+
+
     }
 }
 
