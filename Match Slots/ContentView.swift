@@ -16,9 +16,8 @@ struct ContentView: View {
 
     var body: some View {
 
+      VStack(spacing: 20.0) {
 
-
-      VStack {
         // Name of app
         Text("SwiftUI Match Slots").font(.largeTitle)
         Spacer()
@@ -45,21 +44,24 @@ struct ContentView: View {
         Spacer()
         }
 
-        // Button to spin ( random Images)
-        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-          Text("Spin").padding(.all).accentColor(/*@START_MENU_TOKEN@*/.white/*@END_MENU_TOKEN@*/)
+        // Button to spin
+        Button("Spin") {
 
-        })
-        .frame(width: 100.0)
-        .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.pink/*@END_MENU_TOKEN@*/)
-        .cornerRadius(/*@START_MENU_TOKEN@*/15.0/*@END_MENU_TOKEN@*/)
 
-        Spacer()
+      // Random numbers
+                slot1 = Int.random(in: 1...3)
+                slot2 = Int.random(in: 1...3)
+                slot3 = Int.random(in: 1...3)
+      // Update credits
+          if slot1 == slot2 && slot2 == slot3 {
+            // Match
+            credits += 15
+          } else {
+            credits -= 5
+          }
+
+
       }
-      .padding(.top)
-
-
-
     }
 }
 
