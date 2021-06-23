@@ -19,12 +19,13 @@ struct ContentView: View {
       VStack(spacing: 20.0) {
 
         // Name of app
+        Spacer()
         Text("SwiftUI Match Slots").font(.largeTitle)
         Spacer()
 
         // Credit calulations
         // Score increases if all images match
-        Text("Credits")
+        Text("Credits \(credits)")
         Spacer()
 
         // HStack for 3 Images to match
@@ -59,8 +60,13 @@ struct ContentView: View {
           } else {
             credits -= 5
           }
-
-
+        }
+        .padding()
+        .padding([.leading, .trailing], 40)
+        .foregroundColor(.white)
+        .background(Color(.systemPink))
+        .cornerRadius(25)
+         Spacer()
       }
     }
 }
