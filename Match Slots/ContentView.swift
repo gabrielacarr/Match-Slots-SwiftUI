@@ -28,12 +28,19 @@ struct ContentView: View {
         Spacer()
         }
 
-        // Button to spin
+        // Button to spin ( random Images)
         Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-          Text("Spin")
+          Text("Spin").padding(.all).accentColor(/*@START_MENU_TOKEN@*/.white/*@END_MENU_TOKEN@*/)
+
         })
+        .frame(width: 100.0)
+        .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.pink/*@END_MENU_TOKEN@*/)
+        .cornerRadius(/*@START_MENU_TOKEN@*/15.0/*@END_MENU_TOKEN@*/)
+
         Spacer()
       }
+      .padding(.top)
+
 
 
     }
