@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
 
-  @State  var credits = 1_000
-   @State  var slot1 = 1
+    @State  var credits = 1_000
+    @State  var slot1 = 1
     @State var slot2 = 1
     @State var slot3 = 1
 
@@ -35,16 +35,15 @@ struct ContentView: View {
             .resizable()
             .aspectRatio(contentMode: .fit)
 
-        Image("fruit\(slot2)")
+         Image("fruit\(slot2)")
           .resizable()
           .aspectRatio(contentMode: .fit)
 
-        Image("fruit\(slot3)")
+         Image("fruit\(slot3)")
           .resizable()
           .aspectRatio(contentMode: .fit)
-        Spacer()
         }
-
+        Spacer()
         // Button to spin
         Button("Spin") {
 
