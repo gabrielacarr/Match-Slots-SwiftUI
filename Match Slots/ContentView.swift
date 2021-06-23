@@ -29,10 +29,19 @@ struct ContentView: View {
         Spacer()
 
         // HStack for 3 Images to match
-        HStack(alignment: .center) {
-        Image(systemName: "pencil")
-        Image(systemName: "pencil")
-        Image(systemName: "pencil")
+        // add the resizable and aspectRatio modifiers
+        HStack {
+          Image("fruit\(slot1)")
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+
+        Image("fruit\(slot2)")
+          .resizable()
+          .aspectRatio(contentMode: .fit)
+
+        Image("fruit\(slot3)")
+          .resizable()
+          .aspectRatio(contentMode: .fit)
         Spacer()
         }
 
